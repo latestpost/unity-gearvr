@@ -98,12 +98,7 @@ public class Events : MessageHandler
 
 			createObject = Instantiate (toBuild) as GameObject;
 				
-			Vector3 v = message.GameObjectValue.transform.position;
-			Vector3 playerForward = message.GameObjectValue.transform.root.gameObject.transform.TransformDirection (Vector3.forward);
-			v.y = v.y - 0.1f;
-			v += playerForward;
-			v += playerForward;
-			v += playerForward;
+			Vector3 v = message.Vector3Value;
 
 			createObject.transform.position = v;
 			createObject.transform.parent = container.transform;

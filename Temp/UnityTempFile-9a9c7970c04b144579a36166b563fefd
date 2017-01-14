@@ -93,6 +93,8 @@
 'Assets/Scripts/Handlers/MenuEvents.cs'
 'Assets/Scripts/Handlers/xCollisionEvents.cs'
 'Assets/Scripts/InputController.cs'
+'Assets/Scripts/Teleport.cs'
+'Assets/Scripts/TeleportMarker.cs'
 'Assets/Scripts/Utils/GUIArrows.cs'
 'Assets/Scripts/Utils/InputWarnings.cs'
 'Assets/Scripts/Utils/ObjectPool.cs'

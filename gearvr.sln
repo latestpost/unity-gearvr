@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{1B203279-CBCA-B7FC-2DD3-87BA7564F254}") = "gearvr", "Assembly-CSharp-firstpass.csproj", "{C21DD196-1027-FAF8-5DCD-084DBF1CE4A2}"
+EndProject
+Project("{1B203279-CBCA-B7FC-2DD3-87BA7564F254}") = "gearvr", "Assembly-CSharp.csproj", "{EDDD2AAB-3FEB-D700-107E-FE83EE706705}"
+EndProject
+Project("{1B203279-CBCA-B7FC-2DD3-87BA7564F254}") = "gearvr", "Assembly-CSharp-Editor.csproj", "{67670064-5D57-8C67-2544-44E07DC8CE45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C21DD196-1027-FAF8-5DCD-084DBF1CE4A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C21DD196-1027-FAF8-5DCD-084DBF1CE4A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C21DD196-1027-FAF8-5DCD-084DBF1CE4A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C21DD196-1027-FAF8-5DCD-084DBF1CE4A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDDD2AAB-3FEB-D700-107E-FE83EE706705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDDD2AAB-3FEB-D700-107E-FE83EE706705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDDD2AAB-3FEB-D700-107E-FE83EE706705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDDD2AAB-3FEB-D700-107E-FE83EE706705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67670064-5D57-8C67-2544-44E07DC8CE45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67670064-5D57-8C67-2544-44E07DC8CE45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67670064-5D57-8C67-2544-44E07DC8CE45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67670064-5D57-8C67-2544-44E07DC8CE45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

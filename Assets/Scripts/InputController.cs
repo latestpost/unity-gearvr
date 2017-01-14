@@ -29,7 +29,7 @@ public class InputController : MonoBehaviour {
 		Vector3 cameraForward = transform.TransformDirection(Vector3.forward);
 
 		if (Input.GetKeyDown ("space")) {
-			/*
+			/* shooter
 			Vector3 v = transform.position;
 			Vector3 cF = transform.TransformDirection(Vector3.forward);
 			GameObject createObject = Instantiate (Resources.Load ("Weapons/Sphere", typeof(GameObject))) as GameObject;
@@ -42,6 +42,18 @@ public class InputController : MonoBehaviour {
 			eventMessage.Type = MessageType.AddPrefab;
 			eventMessage.IntValue = prefabInt;
 			eventMessage.GameObjectValue = gameObject;
+
+			//** use cube marker
+			Vector3 v = gameObject.transform.position;
+			v.y = v.y - 0.1f;
+			v += playerForward;
+			v += playerForward;
+
+			eventMessage.Vector3Value = v;
+
+			v = gameState.teleportPosition;
+			v.y = v.y + 0.4f;
+			eventMessage.Vector3Value = v;
 			MessageBus.Instance.SendMessage (eventMessage);
 		}
 			
@@ -85,7 +97,7 @@ public class InputController : MonoBehaviour {
 			MessageBus.Instance.SendMessage (eventMessage);
 		}
 
-		if (Input.GetKeyDown ("p")) {
+		if (Input.GetKeyDown ("b")) {
 			
 			eventMessage = new Message ();
 			eventMessage.Type = MessageType.Blowup;
@@ -115,6 +127,10 @@ public class InputController : MonoBehaviour {
 			eventMessage.Type = MessageType.Menu;
 			eventMessage.IntValue = -1;
 			MessageBus.Instance.SendMessage (eventMessage);
+		}
+
+		if (Input.GetKey("p")) {
+			transform.root.gameObject.transform.position = gameState.teleportPosition;
 		}
 
 		if (Input.GetKey("w")) {
