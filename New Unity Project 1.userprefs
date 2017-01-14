@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Events.cs">
+    <Files>
+      <File FileName="Assets/Events.cs" Line="17" Column="3" />
+      <File FileName="Assets/InputController.cs" Line="31" Column="54" />
+      <File FileName="Assets/MessageBus/MessageBus.cs" Line="29" Column="3" />
+      <File FileName="Assets/MessageBus/MessageHandler.cs" Line="6" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
