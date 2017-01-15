@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Collider : MonoBehaviour {
 
+	private GameState gameState;
+
 	// Use this for initialization
 	void Start () {
-		
+		gameState = GameState.GetInstance;	
 	}
 	
 	// Update is called once per frame
@@ -19,9 +21,9 @@ public class Collider : MonoBehaviour {
 		print ("Detected collision between " + gameObject.name + " and " + collisionInfo.collider.name);
 		//print("There are " + collisionInfo.contacts.Length + " point(s) of contacts");
 		//print("Their relative velocity is " + collisionInfo.relativeVelocity);
-		if (collisionInfo.collider.tag == "Cube") {
-			Destroy (collisionInfo.collider.gameObject);
+		if (collisionInfo.collider.name == "Ground") {
 			Destroy (gameObject);
+			gameState.points = gameState.points + 100;
 		}
 	}
 }

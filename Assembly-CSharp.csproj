@@ -52,14 +52,15 @@
      <Compile Include="Assets\MessageBus\MessageSubscriber.cs" />
      <Compile Include="Assets\MessageBus\MessageSubscriberController.cs" />
      <Compile Include="Assets\MessageBus\MessageSubscriberControllerMe.cs" />
-     <Compile Include="Assets\Scripts\Collider.cs" />
      <Compile Include="Assets\Scripts\DataContainer.cs" />
      <Compile Include="Assets\Scripts\GameState.cs" />
+     <Compile Include="Assets\Scripts\Handlers\Collider.cs" />
+     <Compile Include="Assets\Scripts\Handlers\CollisionEvents.cs" />
      <Compile Include="Assets\Scripts\Handlers\Events.cs" />
      <Compile Include="Assets\Scripts\Handlers\MarkerEvents.cs" />
      <Compile Include="Assets\Scripts\Handlers\MenuEvents.cs" />
-     <Compile Include="Assets\Scripts\Handlers\xCollisionEvents.cs" />
      <Compile Include="Assets\Scripts\InputController.cs" />
+     <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Teleport.cs" />
      <Compile Include="Assets\Scripts\TeleportMarker.cs" />
      <Compile Include="Assets\Scripts\Utils\GUIArrows.cs" />

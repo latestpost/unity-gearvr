@@ -19,7 +19,7 @@ public class Events : MessageHandler
 	{
 		goListArray = Resources.LoadAll<GameObject>("Prefabs");
 		goList = goListArray.ToList();
-		buildMenu();
+		//buildMenu();
 		this.gameState = GameState.GetInstance;
 	}
 
