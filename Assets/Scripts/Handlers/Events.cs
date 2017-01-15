@@ -114,17 +114,8 @@ public class Events : MessageHandler
 
 		if (message.Type == MessageType.RemovePrefab) {
 
-			Vector3 v = message.GameObjectValue.transform.position;
-			Vector3 playerForward = message.GameObjectValue.transform.root.gameObject.transform.TransformDirection (Vector3.forward);
-			v.y = v.y - 0.1f;
-			RaycastHit hit;
-
-			Debug.DrawRay (v, playerForward, Color.green);
-
-			if (Physics.Raycast (v, playerForward, out hit, 4f)) {
-				Debug.Log (hit);
-				Destroy (hit.transform.gameObject);
-			}
+			GameObject gameObject = message.GameObjectValue;
+			Destroy (gameObject);
 		}
 
 		if (message.Type == MessageType.SaveObjects) {

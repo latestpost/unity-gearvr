@@ -22,7 +22,7 @@ public class Teleport : MonoBehaviour {
 		RaycastHit hit;
 
 		if (Physics.Raycast(transform.position, fwd, out hit, 100.0F)){
-			//if (hit.transform.name == "Ground") {
+
 				Vector3 v = hit.point;
 				float rounded;
 				rounded = Mathf.Round (v.x);
@@ -35,7 +35,9 @@ public class Teleport : MonoBehaviour {
 
 
 				gameState.teleportPosition = v;
-			//}
+			if (hit.transform.name != "Ground") {
+				gameState.selectedObject = hit.transform.gameObject;
+			}
 		}
 	}
 }

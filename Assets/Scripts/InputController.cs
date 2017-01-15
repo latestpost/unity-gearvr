@@ -26,7 +26,7 @@ public class InputController : MonoBehaviour {
 		Vector3 playerForward = transform.root.gameObject.transform.TransformDirection(Vector3.forward);
 		Vector3 playerLeft = transform.root.gameObject.transform.TransformDirection(Vector3.left);
 
-		Vector3 cameraForward = transform.TransformDirection(Vector3.forward);
+		//Vector3 cameraForward = transform.TransformDirection(Vector3.forward);
 
 		if (Input.GetKeyDown ("space")) {
 			/* shooter
@@ -111,7 +111,7 @@ public class InputController : MonoBehaviour {
 			eventMessage = new Message ();
 			eventMessage.Type = MessageType.RemovePrefab;
 			eventMessage.IntValue = prefabInt;
-			eventMessage.GameObjectValue = gameObject;
+			eventMessage.GameObjectValue = gameState.selectedObject;
 			MessageBus.Instance.SendMessage (eventMessage);
 		}
 
@@ -129,7 +129,7 @@ public class InputController : MonoBehaviour {
 			MessageBus.Instance.SendMessage (eventMessage);
 		}
 
-		if (Input.GetKey("p")) {
+		if (Input.GetKeyDown("p")) {
 			transform.root.gameObject.transform.position = gameState.teleportPosition;
 		}
 
