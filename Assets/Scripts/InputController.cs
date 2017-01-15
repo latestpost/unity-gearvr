@@ -11,6 +11,7 @@ public class InputController : MonoBehaviour {
 	private int keyDelay = 10;
 	private int timePassed = 0;
 	private GameState gameState;
+	private int velocity = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -66,6 +67,20 @@ public class InputController : MonoBehaviour {
 			eventMessage.Type = MessageType.SelectPrefab;
 			eventMessage.IntValue = gameState.prefabInt;
 			MessageBus.Instance.SendMessage (eventMessage);
+		}
+
+		if (Input.GetKey ("v")) {
+			// build velocity
+			velocity = velocity + 100;
+		}
+
+		if (Input.GetKeyUp ("v")) {
+			// jump
+			Vector3 v = transform.position;
+			Vector3 cF = transform.TransformDirection(Vector3.up);
+			transform.root.GetComponent<Rigidbody>().AddForce(cF * velocity);
+			transform.root.GetComponent<Rigidbody>().AddForce(playerForward * velocity/2);
+			velocity = 0;
 		}
 
 		if (Input.GetKeyDown ("9")) {
